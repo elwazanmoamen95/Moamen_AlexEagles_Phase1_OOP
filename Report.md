@@ -1,7 +1,7 @@
 # Hybrid A* algorithm and differences from standard ## A* algorithm
 An [algorithm](https://www.geeksforgeeks.org/fundamentals-of-algorithms/) is a finite sequence of well-defined instructions that can be used to solve a computational problem. It provides a step-by-step procedure that convert an input into a desired output.
 
- ![alt text](What-is-Algorithm_-1024x631.jpg)
+![alt text](What-is-Algorithm_-1024x631.jpg)
 
 The **A* algorithm** is a pathfinding algorithm  uses both benefits of **Dijkstra’s Algorithm** and **Greedy Best First Search**. 
  * **Dijkstra’s Algorithm** works well to find the shortest path, but wastes time exploring unpromising directions.
