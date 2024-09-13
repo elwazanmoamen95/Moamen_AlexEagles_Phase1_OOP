@@ -2,6 +2,9 @@
 An [algorithm](https://www.geeksforgeeks.org/fundamentals-of-algorithms/) is a finite sequence of well-defined instructions that can be used to solve a computational problem. It provides a step-by-step procedure that convert an input into a desired output.
 
 ![alt text](What-is-Algorithm_-1024x631.jpg)
+
+![alt text](hybrid_a_star.webp)
+
 ## A* algorithm
 The **A* algorithm** is a pathfinding algorithm  uses both benefits of **Dijkstra’s Algorithm** and **Greedy Best First Search**. 
  * **Dijkstra’s Algorithm** works well to find the shortest path, but wastes time exploring unpromising directions.
@@ -15,8 +18,8 @@ Each time through the main loop, it examines the vertex n that has the lowest f(
 
 A* balances the two as it moves from the starting point to the goal.
 
- ![alt text](a-star-trap.png)
  ![alt text](1_ugjVvXCDjAoykSSEUiRUXA.gif)
+
  ![alt text](MIjTP.png)
 
  * A (-, 7): Expand A → Results in B(A, 1), C(A, 4).
@@ -26,8 +29,11 @@ A* balances the two as it moves from the starting point to the goal.
  * D(AB, 5, 2), G(ABC, 7, 0), G(AC, 8, 0), D(ABC, 6, 2), D(AC, 7, 2), B(AC, 6, 6): Expand D → Results in C(ABD, 8), G(ABD, 11).
  * G(ABC, 7, 0), G(AC, 8, 0), D(ABC, 6, 2), D(AC, 7, 2), C(ABD, 8, 2), G(ABD, 11, 0), B(AC, 6, 6): Goal node G is found through ABC.
 
+[Animation sources](https://www.redblobgames.com/pathfinding/a-star/introduction.html)
+
 ## Hybrid A* Algorithm
 extends the `standard A* algorithm` for more complex motion planning, considered one of the most popular path planning algorithms for car-like robots.
+
 
 check out[Artificial Intelligence for Robotics](https://youtu.be/qXZt-B7iUyw?si=btkN0XP_qiF3LEEY)
 
@@ -37,7 +43,7 @@ check out[Artificial Intelligence for Robotics](https://youtu.be/qXZt-B7iUyw?si=
 car-like moving as below:
  ![alt text](1_I7CEqAsmgF3orEvRbQKfpA.webp)
 
-difference A* and Hybrid A*
+**difference A* and Hybrid A*:**
  ![alt text](1__RWpOYhb6pTVIPDR0Otdfg.webp)
 
 **Search Process:**
@@ -55,3 +61,8 @@ difference A* and Hybrid A*
 
 **Analytical Expansion**
  * connect the best candidate state directly to the goal using a collision-free path
+
+**Implementation**
+ * Hybrid A Star automatically searches for a target point from the farthest free region.
+ * It takes 100~400ms.
+ [Hybrid A Star Path Planner for Autonomous Vehicle Obstacle Avoidance](https://youtu.be/blGubY4PztI?si=RS_WBgj9CCLlMPWI)
