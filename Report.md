@@ -1,6 +1,7 @@
 # Hybrid A* algorithm and differences from standard ## A* algorithm
 An [algorithm](https://www.geeksforgeeks.org/fundamentals-of-algorithms/) is a finite sequence of well-defined instructions that can be used to solve a computational problem. It provides a step-by-step procedure that convert an input into a desired output.
-![alt text](What-is-Algorithm_-1024x631.jpg)
+
+ ![alt text](What-is-Algorithm_-1024x631.jpg)
 
 The **A* algorithm** is a pathfinding algorithm  uses both benefits of **Dijkstra’s Algorithm** and **Greedy Best First Search**. 
  * **Dijkstra’s Algorithm** works well to find the shortest path, but wastes time exploring unpromising directions.
@@ -14,9 +15,9 @@ Each time through the main loop, it examines the vertex n that has the lowest f(
 
 A* balances the two as it moves from the starting point to the goal.
 
-![alt text](a-star-trap.png)
+ ![alt text](a-star-trap.png)
 
-![alt text](MIjTP.png)
+ ![alt text](MIjTP.png)
 
  * A (-, 7): Expand A → Results in B(A, 1), C(A, 4).
  * C(A, 4, 2), B(A, 1, 6): Expand C → Results in B(AC, 6), D(AC, 7), G(AC, 8).
@@ -34,9 +35,12 @@ check out[Artificial Intelligence for Robotics](https://youtu.be/qXZt-B7iUyw?si=
  * **Objective**: Hybrid A* extends A* to car-like robots by finding a sequence of safe poses (position + orientation) from start to goal in a continuous state space SE(2). The car's non-holonomic constraints, such as limited turning radius, are considered in the search process.
  * **Kinematic Model**: The car's motion is modeled using Dubins paths for forward-only movements or Reeds-Shepp paths for forward and reverse motions, enabling more realistic vehicle behavior.
 car-like moving as below:
-![alt text](1_I7CEqAsmgF3orEvRbQKfpA.webp)
+
+ ![alt text](1_I7CEqAsmgF3orEvRbQKfpA.webp)
+
 difference A* and Hybrid A*
-![alt text](1__RWpOYhb6pTVIPDR0Otdfg.webp)
+
+ ![alt text](1__RWpOYhb6pTVIPDR0Otdfg.webp)
 
 **Search Process:**
  * Instead of expanding along grid cells, Hybrid A* simulates the vehicle's kinematic behavior, opening new states based on the car's motion constraints.
@@ -46,10 +50,10 @@ difference A* and Hybrid A*
  * h(s), a crucial element in Hybrid A* for selecting the best state for propagation. Standard A*, the heuristic guides the search in a 2D positional grid, but in the SE(2) space, the heuristic needs to estimate the shortest path considering the robot’s pose (position and orientation).
 
 **Nonholonomic Heuristic**
-Use [Dubins paths](https://en.wikipedia.org/wiki/Dubins_path) (for forward motion) or Reeds-Shepp paths (for forward and reverse motion)
+ * Use [Dubins paths](https://en.wikipedia.org/wiki/Dubins_path) (for forward motion) or Reeds-Shepp paths (for forward and reverse motion)
 
 **Holonomic Heuristic with Obstacles**
-Use a grid-based method similar to Dijkstra’s algorithm to calculate the shortest path around obstacles and combined with the nonholonomic heuristic.
+ * Use a grid-based method similar to Dijkstra’s algorithm to calculate the shortest path around obstacles and combined with the nonholonomic heuristic.
 
 **Analytical Expansion**
-connect the best candidate state directly to the goal using a collision-free path
+ * connect the best candidate state directly to the goal using a collision-free path
