@@ -1,9 +1,9 @@
 # Hybrid A* algorithm and differences from standard
 An [algorithm](https://www.geeksforgeeks.org/fundamentals-of-algorithms/) is a finite sequence of well-defined instructions that can be used to solve a computational problem. It provides a step-by-step procedure that convert an input into a desired output.
 
-![alt text](What-is-Algorithm_-1024x631.jpg)
+![alt text](assets/What-is-Algorithm_-1024x631.jpg)
 
-![alt text](hybrid_a_star.webp)
+![alt text](assets/hybrid_a_star.webp)
 
 ## A* algorithm
 The **A* algorithm** is a pathfinding algorithm  uses both benefits of **Dijkstra’s Algorithm** and **Greedy Best First Search**. 
@@ -18,9 +18,9 @@ Each time through the main loop, it examines the vertex n that has the lowest f(
 
 A* balances the two as it moves from the starting point to the goal.
 
- ![alt text](1_ugjVvXCDjAoykSSEUiRUXA.gif)
+ ![alt text](assets/1_ugjVvXCDjAoykSSEUiRUXA.gif)
 
- ![alt text](MIjTP.png)
+ ![alt text](assets/MIjTP.png)
 
  * A (-, 7): Expand A → Results in B(A, 1), C(A, 4).
  * C(A, 4, 2), B(A, 1, 6): Expand C → Results in B(AC, 6), D(AC, 7), G(AC, 8).
@@ -41,10 +41,10 @@ check out[Artificial Intelligence for Robotics](https://youtu.be/qXZt-B7iUyw?si=
  * **Objective**: Hybrid A* extends A* to car-like robots by finding a sequence of safe poses (position + orientation) from start to goal in a continuous state space SE(2). The car's non-holonomic constraints, such as limited turning radius, are considered in the search process.
  * **Kinematic Model**: The car's motion is modeled using Dubins paths for forward-only movements or Reeds-Shepp paths for forward and reverse motions, enabling more realistic vehicle behavior.
 car-like moving as below:
- ![alt text](1_I7CEqAsmgF3orEvRbQKfpA.webp)
+ ![alt text](assets/1_I7CEqAsmgF3orEvRbQKfpA.webp)
 
 **difference A* and Hybrid A*:**
- ![alt text](1__RWpOYhb6pTVIPDR0Otdfg.webp)
+ ![alt text](assets/1__RWpOYhb6pTVIPDR0Otdfg.webp)
 
 **Search Process:**
  * Instead of expanding along grid cells, Hybrid A* simulates the vehicle's kinematic behavior, opening new states based on the car's motion constraints.
